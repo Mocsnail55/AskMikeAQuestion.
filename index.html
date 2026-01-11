@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>question</title>
+    <style>
+      .container {
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h2 id="mike-speech">Now, got any more burning questions?</h2>
+      <img id="mike-image" src="../assets/Mike.png" alt="Mike Image" />
+
+      <form id="question-form">
+        <label for="question-input">Your Question:</label><br />
+        <input
+          type="text"
+          id="question-input"
+          name="question"
+          required
+        /><br /><br />
+      </form>
+    </div>
+
+    <script>
+      const inputBox = document.getElementById("question-input");
+      const mikeSpeech = document.getElementById("mike-speech");
+
+      function answerQuestion() {
+        const q = inputBox.value.trim().toLowerCase();
+
+        switch (q) {
+          case "what is your good food?":
+            mikeSpeech.textContent = "Pasta lol";
+            break;
+
+          case "what is your favorite color?":
+            mikeSpeech.textContent = "Blue";
+            break;
+
+          case "what is your favorite number?":
+            mikeSpeech.textContent = "Three";
+            break;
+
+          default:
+            mikeSpeech.textContent = "Something else";
+        }
+
+        console.log(answer);
+        mikeSpeech.textContent = answer;
+      }
+
+      inputBox.addEventListener("input", answerQuestion);
+    </script>
+  </body>
+</html>
